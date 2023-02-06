@@ -15,7 +15,7 @@ function ProductsBrowser({ Trigger, setclose, data }) {
 
   useEffect(() => {
     if (Trigger) divRef.current.scrollTop = 500;
-  }, [Trigger]);a
+  }, [Trigger]);
 
   const handleScroll = () => {
     if (divRef.current.scrollTop === 0) setclose(false);
