@@ -4,14 +4,14 @@ import { MiniButton, NormalButton } from "../../Elements/Buttons";
 import { Slider } from "../../Elements/Slider";
 import { BiChevronDown } from "react-icons/bi";
 import { MdRoom } from "react-icons/md";
-
+import ReactMapGL from "react-map-gl";
+import mapboxgl from "mapbox-gl"; //
 import "mapbox-gl/dist/mapbox-gl.css";
-import Map, { GeolocateControl, Marker } from "react-map-gl";
+import Map, { Marker } from "react-map-gl";
 
 function ProductsBrowser({ Trigger, setclose, data }) {
   const divRef = useRef();
   const [SidebarDropdown, setSidebarDropdown] = useState(true);
-  console.log(data);
 
   useEffect(() => {
     if (Trigger) divRef.current.scrollTop = 500;
